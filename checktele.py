@@ -79,7 +79,7 @@ def gen_user(choice):
         username = "".join(f)
         username = username + "bot"
 
-    elif choice == "خماسي حرفين":
+    elif choice == "حرفين":
         c = random.choices(a)
         d = random.choices(e)
 
