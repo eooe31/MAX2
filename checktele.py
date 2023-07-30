@@ -1,4 +1,4 @@
-# by: t.me/MAX985
+# by: t.me/Mikthon
 
 import random
 import requests
@@ -46,7 +46,7 @@ def check_user(username):
         return "Unavailable"
 
 def gen_user(choice):
-    if choice == "مكرر":
+    if choice == "1":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -74,7 +74,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "vip10":
+    if choice == "3":
         c = random.choices(b)
         d = random.choices(b)
         f = [c[0], d[0]]
@@ -90,7 +90,7 @@ def gen_user(choice):
             username = 'vip'+username
         else:
             pass
-    if choice == "vip100":
+    if choice == "4":
         c = random.choices(b)
         d = random.choices(b)
         s = random.choices(b)
@@ -136,7 +136,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "سداسي":
+    if choice == "7":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
@@ -150,7 +150,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "مجرر":
+    if choice == "8":
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
@@ -164,7 +164,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "مكر":
+    if choice == "9":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -178,7 +178,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "رباعي":
+    if choice == "10":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], d[0], "_", c[0], c[0]]
@@ -192,7 +192,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "خامس":
+    if choice == "11":
         c = d =random.choices(a)
         d = random.choices(e)
         s = random.choices(b)
@@ -206,7 +206,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "سادس":
+    if choice == "12":
         c = d =random.choices(a)
         d = random.choices(e)
         s = random.choices(b)
@@ -220,7 +220,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "ارقام":
+    if choice == "13":
         c = d =random.choices(a)
         d = random.choices(a)
         s = random.choices(b)
@@ -235,7 +235,6 @@ def gen_user(choice):
         else:
             pass
     return username
-
 
 @eighthon.on(events.NewMessage(outgoing=True, pattern=r"\.الصيد"))
 async def _(event):
@@ -271,6 +270,7 @@ async def _(event):
  • لمعرفة عدد المحاولات للصيد
 
 @MAX985**
+
 '''
     )
 
