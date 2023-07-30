@@ -46,7 +46,7 @@ def check_user(username):
         return "Unavailable"
 
 def gen_user(choice):
-    if choice == "1":
+    if choice == "مكرر":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -60,7 +60,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "2":
+    if choice == "ثلاثي":
         c = random.choices(a)
         d = random.choices(a)
         s = random.choices(e)
@@ -74,7 +74,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "3":
+    if choice == "vip10":
         c = random.choices(b)
         d = random.choices(b)
         f = [c[0], d[0]]
@@ -90,7 +90,7 @@ def gen_user(choice):
             username = 'vip'+username
         else:
             pass
-    if choice == "4":
+    if choice == "vip100":
         c = random.choices(b)
         d = random.choices(b)
         s = random.choices(b)
@@ -108,7 +108,7 @@ def gen_user(choice):
             username = 'vip'+username
         else:
             pass
-    if choice == "5":
+    if choice == "خماسي":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], d[0], c[0], c[0], c[0]]
@@ -122,7 +122,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "6":
+    if choice == "حرفين":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], d[0], c[0], c[0], d[0]]
@@ -136,7 +136,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "7":
+    if choice == "سداسي":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
@@ -150,7 +150,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "8":
+    if choice == "مجرر":
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
@@ -164,7 +164,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "9":
+    if choice == "مكر":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -178,7 +178,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "10":
+    if choice == "رباعي":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], d[0], "_", c[0], c[0]]
@@ -192,7 +192,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "11":
+    if choice == "خامس":
         c = d =random.choices(a)
         d = random.choices(e)
         s = random.choices(b)
@@ -206,7 +206,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "12":
+    if choice == "سادس":
         c = d =random.choices(a)
         d = random.choices(e)
         s = random.choices(b)
@@ -220,7 +220,7 @@ def gen_user(choice):
             username = ''.join(f)
         else:
             pass
-    if choice == "13":
+    if choice == "ارقام":
         c = d =random.choices(a)
         d = random.choices(a)
         s = random.choices(b)
@@ -243,19 +243,32 @@ async def _(event):
         '''
 **-- -- -- -- -- -- -- -- --
  الانواع :
- ثلاثي
- -- -- -- -- - 
- سداسي حرفين
- -- -- -- -- -- -- -- -- -- -- --
-  سداسيات
- -- -- -- -- -- 
-  بوتات
- -- -- -- -- --
- خماسي
- -- -- -- -- -- 
- خماسي حرفين
- -- -- -- -- -- 
- سباعيات
+ 	
+ مكرر : مثل a_s_s × s_a_s
+ 
+ ثلاثي : ثلاثي عادي
+
+ vip10 : مثل vip38
+ 
+ vip100 : مثل vip387
+
+  خماسي : مثل scsss
+ 
+ حرفين : مثل www88
+
+ سداسي : مثل sxssss
+ 
+ مجرر : s_3_3 × s_6_s
+ 
+ مكر : s_s_z × s_n_n 
+ 
+ رباعي :@P8_PP 
+ 
+ خماس :sx999
+ 
+ سادس : s999c 
+ 
+ ارقام : ss999
  -- -- -- -- -- 
    طريقه الصيد هيه كالتالي
  - .صيد + نوع الصيد تكتب الاسم 
