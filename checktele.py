@@ -38,203 +38,78 @@ def check_user(username):
         "Accept-Language": "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7",
     }
 
-
     response = requests.get(url, headers=headers)
-    if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"') >= 0:
-        return "Available"
+    if (
+        response.text.find(
+            'If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"'
+        )
+        >= 0
+    ):
+        return True
     else:
-        return "Unavailable"
+        return False
+
 
 def gen_user(choice):
-    if choice == "1":
+    if choice == "ثلاثيات":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], "_", s[0], "_", c[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = random.choices(a)
-            d = random.choices(e)
-            s = random.choices(e)
-            f = [c[0], "_", s[0], "_", s[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "ثلاثي":
+        f = [c[0], "_", s[0], "_", d[0]]
+        username = "".join(f)
+
+    elif choice == "ثلاثي":
         c = random.choices(a)
-        d = random.choices(a)
+        d = random.choices(e)
         s = random.choices(e)
         f = [c[0], "_", d[0], "_", s[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = random.choices(a)
-            d = random.choices(b)
-            s = random.choices(e)
-            f = [c[0], "_", d[0], "_", s[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "3":
-        c = random.choices(b)
-        d = random.choices(b)
-        f = [c[0], d[0]]
-        random.shuffle(f)
-        username = ''.join(f)
-        username = 'vip'+username
-        if username in banned[0]:
-            c = random.choices(b)
-            d = random.choices(b)
-            f = [c[0], d[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-            username = 'vip'+username
-        else:
-            pass
-    if choice == "4":
-        c = random.choices(b)
-        d = random.choices(b)
-        s = random.choices(b)
-        f = [c[0], d[0], s[0]]
-        random.shuffle(f)
-        username = ''.join(f)
-        username = 'vip'+username
-        if username in banned[0]:
-            c = random.choices(b)
-            d = random.choices(b)
-            s = random.choices(b)
-            f = [c[0], d[0], s[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-            username = 'vip'+username
-        else:
-            pass
-    if choice == "خماسي":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], d[0], c[0], c[0], c[0]]
-        random.shuffle(f)
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d = random.choices(a)
-            d = random.choices(e)
-            f = [c[0], d[0], c[0], c[0], c[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "حرفين":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], d[0], c[0], c[0], d[0]]
-        random.shuffle(f)
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d = random.choices(a)
-            d = random.choices(e)
-            f = [c[0], d[0], c[0], c[0], d[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "7":
+        username = "".join(f)
+    elif choice == "سداسيات":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
         random.shuffle(f)
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d = random.choices(a)
-            d = random.choices(e)
-            f = [c[0], c[0], c[0], c[0], c[0], d[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "8":
-        c = random.choices(a)
-        d = random.choices(b)
-        s = random.choices(e)
-        f = [c[0], "_", d[0], "_", d[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = random.choices(a)
-            d = random.choices(b)
-            s = random.choices(e)
-            f = [c[0], "_", d[0], "_", c[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "9":
+        username = "".join(f)
+    elif choice == "بوتات":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], "_", s[0], "_", s[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = random.choices(a)
-            d = random.choices(e)
-            s = random.choices(e)
-            f = [c[0], "_", c[0], "_", s[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "10":
-        c = d = random.choices(a)
+        f = [c[0], s[0], d[0]]
+        # random.shuffle(f)
+        username = "".join(f)
+        username = username + "bot"
+
+    elif choice == "حرفين":
+        c = random.choices(a)
         d = random.choices(e)
-        f = [c[0], d[0], "_", c[0], c[0]]
+
+        f = [c[0], d[0], c[0], c[0], d[0]]
         random.shuffle(f)
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d = random.choices(a)
-            d = random.choices(e)
-            f = [c[0], d[0], "_", c[0], c[0]]
-            random.shuffle(f)
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "11":
-        c = d =random.choices(a)
-        d = random.choices(e)
-        s = random.choices(b)
-        f =  [c[0], d[0], s[0], s[0], s[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d =random.choices(a)
-            d = random.choices(e)
-            s = random.choices(b)
-            f =  [c[0], d[0], s[0], s[0], s[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "12":
-        c = d =random.choices(a)
-        d = random.choices(e)
-        s = random.choices(b)
-        f =  [c[0], s[0], s[0], s[0], d[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d =random.choices(a)
-            d = random.choices(e)
-            s = random.choices(b)
-            f =  [c[0], s[0], s[0], s[0], d[0]]
-            username = ''.join(f)
-        else:
-            pass
-    if choice == "13":
-        c = d =random.choices(a)
-        d = random.choices(a)
-        s = random.choices(b)
-        f =  [c[0], c[0], s[0], s[0], s[0]]
-        username = ''.join(f)
-        if username in banned[0]:
-            c = d =random.choices(a)
-            d = random.choices(a)
-            s = random.choices(b)
-            f =  [c[0], s[0], s[0], s[0], c[0]]
-            username = ''.join(f)
-        else:
-            pass
+        username = "".join(f)
+
+    elif choice == "خماسي":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], c[0], c[0], d[0]]
+        random.shuffle(f)
+        username = "".join(f)
+
+    elif choice == "سباعيات":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], c[0], c[0], d[0], c[0], c[0]]
+        random.shuffle(f)
+        username = "".join(f)
+    elif choice == "تيست":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], c[0]]
+        random.shuffle(f)
+        username = "".join(f)
+    else:
+        return "error"
     return username
+
 
 @eighthon.on(events.NewMessage(outgoing=True, pattern=r"\.الصيد"))
 async def _(event):
@@ -244,7 +119,7 @@ async def _(event):
  الانواع :
  ثلاثي
  -- -- -- -- - 
- سداسي حرفين
+ ثلاثيات
  -- -- -- -- -- -- -- -- -- -- --
   سداسيات
  -- -- -- -- -- 
@@ -321,7 +196,7 @@ async def hunterusername(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"⌯ تم الصيد !'𓆪\n⎱ UserName: ↣ (@{username}❳!\n⎱ Hunting Log {trys2[0]}\n⎱ by : @P8_PP",
+                    f"⌯ تم الصيد !'𓆪\n⎱ UserName: ↣ (@{username}❳!\n⎱ Hunting Log {trys2[0]}\n⎱ by  : @P8_PP × @HFFHH",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -351,7 +226,7 @@ async def hunterusername(event):
         trys[0] += 1
     isclaim.clear()
     isclaim.append("off")
-    await event.client.send_message(event.chat_id, "**- تم بنجاح الانتهاء من الصيد**")
+    await event.client.send_message(event.chat_id, "**- تم الصيد تيم ماكس @Max985 **")
 
 
 @eighthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت"))
@@ -389,7 +264,7 @@ async def _(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @P8_PP !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @P8_PP × @HFFHH !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -472,7 +347,7 @@ async def _(event):
                         await event.client.send_message(event.chat_id, f'''** 
 𝙷𝚄𝙽𝚃𝙸𝙽𝙶 (@{username})
 × ᴄʟɪᴄᴋs ↬  {trys}
-lD: @Max985 / @P8_PP **
+lD: @Max985 / @P8_PP × @HFFHH **
     ''')
                         break
                     except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -505,7 +380,7 @@ lD: @Max985 / @P8_PP **
                 await event.client.send_message(event.chat_id, f'''**
 𝙷𝚄𝙽𝚃𝙸𝙽𝙶 (@{username})
 × ᴄʟɪᴄᴋs ↬  {trys}
-lD: @Max985 / @P8_PP
+lD: @Max985 / @P8_PP × @HFFHH
 -- -- -- -- -- -- -- -- -- -- -- -- -- **
     ''')
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
